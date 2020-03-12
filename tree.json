@@ -1,1 +1,136 @@
-{"files": ["index.html", "LICENSE", "README.md", "tree.json", "\u30b5\u30a4\u30c8\u4f5c\u6210\u6642\u306e\u6d41\u308c.txt", "\u30d1\u30b9\u63a2\u7d22.py"], ".git": {"files": ["config", "description", "HEAD", "index", "packed-refs"], "hooks": {"files": ["applypatch-msg.sample", "commit-msg.sample", "fsmonitor-watchman.sample", "post-update.sample", "pre-applypatch.sample", "pre-commit.sample", "pre-push.sample", "pre-rebase.sample", "pre-receive.sample", "prepare-commit-msg.sample", "update.sample"]}, "info": {"files": ["exclude"]}, "logs": {"files": ["HEAD"], "refs": {"files": [], "heads": {"files": ["master"]}, "remotes": {"files": [], "origin": {"files": ["HEAD"]}}}}, "objects": {"files": [], "6f": {"files": ["1aa3c14e0ae069cce760ce33fc035ab1845321"]}, "82": {"files": ["32692b0edc4d345af32b6af42dc7c534208f2f"]}, "be": {"files": ["d692569dac573b36f812466b9699c6060aecfb"]}, "fb": {"files": ["f4d05abbeb34d30a31a2c38c45db62c8c1c69b"]}, "info": {"files": []}, "pack": {"files": []}}, "refs": {"files": [], "heads": {"files": ["master"]}, "remotes": {"files": [], "origin": {"files": ["HEAD"]}}, "tags": {"files": []}}}, "doc": {"files": ["sample1.md"]}}
+{
+  ".git": {
+    "files": [
+      "config",
+      "description",
+      "HEAD",
+      "index",
+      "packed-refs"
+    ],
+    "hooks": {
+      "files": [
+        "applypatch-msg.sample",
+        "commit-msg.sample",
+        "fsmonitor-watchman.sample",
+        "post-update.sample",
+        "pre-applypatch.sample",
+        "pre-commit.sample",
+        "pre-push.sample",
+        "pre-rebase.sample",
+        "pre-receive.sample",
+        "prepare-commit-msg.sample",
+        "update.sample"
+      ]
+    },
+    "info": {
+      "files": [
+        "exclude"
+      ]
+    },
+    "logs": {
+      "files": [
+        "HEAD"
+      ],
+      "refs": {
+        "files": [],
+        "heads": {
+          "files": [
+            "master"
+          ]
+        },
+        "remotes": {
+          "files": [],
+          "origin": {
+            "files": [
+              "HEAD"
+            ]
+          }
+        }
+      }
+    },
+    "objects": {
+      "04": {
+        "files": [
+          "ea0a57a5aada78cee4078b4fcc7b915a693a96"
+        ]
+      },
+      "57": {
+        "files": [
+          "f1a9666618ad8cdf0440db6beba620be384f9c"
+        ]
+      },
+      "6f": {
+        "files": [
+          "1aa3c14e0ae069cce760ce33fc035ab1845321"
+        ]
+      },
+      "82": {
+        "files": [
+          "32692b0edc4d345af32b6af42dc7c534208f2f"
+        ]
+      },
+      "a2": {
+        "files": [
+          "d922946da0998b40b33e6ab1997f80a73d82dd"
+        ]
+      },
+      "be": {
+        "files": [
+          "d692569dac573b36f812466b9699c6060aecfb"
+        ]
+      },
+      "d8": {
+        "files": [
+          "ac9e9b93f7554f5f6ef04916cac1fd414ad263"
+        ]
+      },
+      "e6": {
+        "files": [
+          "9de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        ]
+      },
+      "fb": {
+        "files": [
+          "f4d05abbeb34d30a31a2c38c45db62c8c1c69b"
+        ]
+      },
+      "files": [],
+      "info": {
+        "files": []
+      },
+      "pack": {
+        "files": []
+      }
+    },
+    "refs": {
+      "files": [],
+      "heads": {
+        "files": [
+          "master"
+        ]
+      },
+      "remotes": {
+        "files": [],
+        "origin": {
+          "files": [
+            "HEAD"
+          ]
+        }
+      },
+      "tags": {
+        "files": []
+      }
+    }
+  },
+  "doc": {
+    "files": [
+      "sample1.md"
+    ]
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "tree.json",
+    "パス探索.py"
+  ]
+}
