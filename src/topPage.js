@@ -24,7 +24,7 @@ function loadPages(){
     var baseURL = "https://raw.githubusercontent.com/create-personal-1215/techMemo/master";
     var dirJSON = "tree.json";
     $.getJSON(baseURL +'/'+ dirJSON , function(data) {
-        var links = createLinks(data, baseURL);
+        var links = createLinks(data, baseURL + '/doc');
         $("#pages").append(links);
     });
 }
@@ -32,7 +32,8 @@ function loadPages(){
 function createLinks(data, baseURL){
     var contents = $("<ul></ul>");
     data.files.forEach(name => {
-        var link = $("<a></a>").text(name)
+        var filename = name.slice(0, name.indexOf("."));
+        var link = $("<a></a>").text(filename)
                     .attr("href", baseURL +'/'+ name);
         var list = $("<li></li>").append(link);
         contents.append(list);
@@ -61,7 +62,12 @@ function fetchMarkdown(url){
         try {
           const response = await fetch(url, {method: 'GET'});
           markText = await response.text();
-          $(".content").html(marked(markText));
+          if(response.ok){
+            $(".content").html(marked(markText));
+          }else{
+            $(".content").html("存在しないファイルです。");
+          }
+          
         } catch (e) {
           target.innerHTML = 'failed to load a markdown file';
         }
