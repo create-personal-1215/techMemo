@@ -24,6 +24,7 @@ function loadPages(){
     var baseURL = "https://raw.githubusercontent.com/create-personal-1215/techMemo/master";
     var dirJSON = "tree.json";
     $.getJSON(baseURL +'/'+ dirJSON , function(data) {
+		console.log(data);
         var links = createLinks(data, baseURL + '/doc');
         $("#pages").append(links);
     });
