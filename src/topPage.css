@@ -70,3 +70,24 @@ li.selected {
     border-left-color: lightseagreen;
     background-color: lightblue;
 }
+.content h2{
+    margin-bottom: 0px;
+    border-bottom: 1px solid black;
+}
+.content p{
+    margin-top: 0px;
+}
+code{
+    display: block;
+    padding: 10px 0px;
+    background: dimgray;
+    color: white;
+}
+.codeLanguage{
+	background:    lightblue;
+    border-radius: 0.4em 0.4em 0em 0em;
+    min-width:     50px;
+    text-align:    center;
+    display:       inline-block;
+    padding-top:   0.2em;
+}

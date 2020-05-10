@@ -1,6 +1,7 @@
 
 
 $(function() {
+    setupMarked();
     loadPages();
 
     $(document).on("click", "#pages li > a", function(e){
@@ -19,6 +20,17 @@ $(function() {
         $(".side-bar").slideToggle();
     });
 });
+
+function setupMarked(){
+    marked.setOptions({
+        // code要素にdefaultで付くlangage-を削除
+        langPrefix: '',
+        // highlightjsを使用したハイライト処理を追加
+        highlight: function(code, lang) {
+          return hljs.highlightAuto(code, [lang]).value
+        }
+      });
+}
 
 function loadPages(){
     var baseURL = "https://raw.githubusercontent.com/create-personal-1215/techMemo/master";
@@ -63,14 +75,27 @@ function fetchMarkdown(url){
         try {
           const response = await fetch(url, {method: 'GET'});
           markText = await response.text();
+          var regex = /sql:/gi;
+          markText = markText.replace(regex, "sql")
           if(response.ok){
-            $(".content").html(marked(markText));
+            // ファイル読み込み
+            var $content = $(".content");
+            $content.html(marked(markText));
+            
+            // コード部分に言語を表示
+            $content.find("code").each(function(index){
+                var className = $(this).attr("class");
+                var codeLang  = className.substr(0);  //9は"language-"の文字数
+                var $lang = $("<span></span>").addClass("codeLanguage").text(codeLang);
+                $(this).before($lang);
+            });
           }else{
             $(".content").html("存在しないファイルです。");
           }
           
         } catch (e) {
-          target.innerHTML = 'failed to load a markdown file';
+            console.log(e);
+          $(".content").html('failed to load a markdown file');
         }
       })();
 }
