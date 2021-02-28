@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>techMemo</title>
+
+  <link rel="stylesheet" href="c3/c3.css">
+  <script src="c3/d3.min.js"></script>
+  <script src="c3/c3.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="pageTitle">コラッツ数列計算</h1>
+  </header>
+  <div class="summary">
+    この画面は、コラッツの問題を体験するために用意しました。
+    コラッツの問題とは、数論の未解決問題のひとつであり、1937年にローター・コラッツが問題を提示しました。
+    任意の自然数から次の計算を繰り返すと、最終的にどうなるか検証する問題となっています。
+    <ul>
+      <li>n が偶数の場合、n を 2 で割る</li>
+      <li>n が奇数の場合、n に 3 をかけて 1 を足す</li>
+    </ul>
+    「どんな初期値から始めても、有限回の操作のうちに必ず 1 に到達する（そして 1→4→2→1 というループに入る）」という主張が、コラッツの予想として知られています。
+    詳しく知りたい人は、Wikipediaなどを参照してください。<br>
+    <a  href="https://ja.wikipedia.org/wiki/コラッツの問題" target="_blank"
+        rel="noopener noreferrer">
+      コラッツの問題
+    </a>
+  </div>
+  <div class="form">
+    <p><label>初期値</label><input type="number" id="inputN"><p>
+    <button id="calcBtn">計算開始</button>
+    <span id="message"></span>
+  </div>
+  <div id="chart"></div>
+</body>
+</html>
